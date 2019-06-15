@@ -1,0 +1,8 @@
+*{margin: 0;padding: 0;}
+body{font-size: 14px;
+    font-family: Microsoft Yahei,Arial;
+    color: #7d7d7e;}
+img:first-child{height: 280px;}
+.breadcrumb {background-color: #ffffff;padding: 0px;           height: 38px;line-height: 38px;}
+a{text-decoration: none;
+    color: #7d7d7e}
