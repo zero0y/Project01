@@ -1,0 +1,4 @@
+.list_title>div:first-child{line-height: 2rem}
+.list_title>div:nth-child(2){line-height:1.8rem}
+span{
+    font-size: 12px; color: #979797}

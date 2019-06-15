@@ -1,18 +1,4 @@
-*{margin: 0;padding: 0;}
-/* 设置整个页面的样式 字体大小 字体颜色 背景颜色 */
-body{font-size: 14px;
-    font-family: Microsoft Yahei,Arial;
-    color: #7d7d7e;
-    text-align: center}
-#container{margin: 0rem 8rem 0rem 8rem}
-    /* 设置头部图片的高度 */
-img:first-child{height: 280px;}
-/* 设置面包屑导航的样式 */
-.breadcrumb {background-color: #ffffff;padding: 0px; height: 38px;line-height: 38px;}
- /* 设置a标签的样式 */
-a,a:hover{text-decoration: none;
-    color: #7d7d7e}
-span{color: black}
+
 .about_part01{text-align: center}
 .about_part01>img:first-child{width: 198px;height: 22px;}
 /* 设置about_img2.jpg图片的大小                                                                        //需要手写媒体查询在不同屏幕下设置图片大小*/
