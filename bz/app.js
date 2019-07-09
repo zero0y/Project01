@@ -1,7 +1,7 @@
 const express=require('express');
 //在web服务器下使用路由器  管理员的路由器
 const adminRouter=require('./routes/admin.js');
-const gameRouter=require('./routes/game.js');
+const game=require('./routes/game');
 const posting = require('./routes/posting')
 const reply = require('./routes/reply')
 const active = require('./routes/game_active')
@@ -22,9 +22,10 @@ server.use(bodyParser.urlencoded({
 
 //使用的url :/user 
 //  把用户的路由器挂载到user下  使用时 /admin
-server.use('/admin',adminRouter);
-server.use('/game',gameRouter);
-app.use('/posting',posting)
-app.use("/reply",reply)
-app.use("/game",active)
-app.use("/game",strategy)
+server.use('/admin',adminRouter);  //管理员
+server.use('/posting',posting)  //帖子
+server.use("/reply",reply)  //回复
+server.use("/game",active)   //游戏活动
+server.use("/game",strategy)  //游戏公告
+server.use("/game",game)    //游戏图鉴
+
