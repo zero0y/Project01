@@ -3,10 +3,6 @@ const express=require('express');
 const pool=require('../pool.js');
 //创建路由器对象
 var router=express.Router();
-//测试路由
-// router.get("/sp",(req,res)=>{
-//     res.send("第一个程序");
-// });
 
 //添加商品
 router.get('/inse',function(req,res){
@@ -48,6 +44,7 @@ router.get('/inse',function(req,res){
 	});
   });
 
+
 //查询商品
 //127.0.0.1:8080/bz_lt/sele?lid=1
 router.get('/sele',(req,res)=>{
@@ -66,6 +63,7 @@ router.get('/sele',(req,res)=>{
 		res.send(result);
 	});
 });
+
 
 //删除商品
 router.get('/dele',(req,res)=>{
