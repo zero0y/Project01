@@ -2,7 +2,7 @@ const express = require('express')
 const pool = require('../pool.js')
 var reply = express.Router()
 /*-------------------------------reply表-------------------------- */
-// 查找
+// 查找回复内容
 reply.get("/check",(req,res)=>{
     // 获取页面地址栏id=后的内容
     var obj=req.query.id

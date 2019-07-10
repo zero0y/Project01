@@ -4,8 +4,10 @@ const express=require("express");
 const pool=require("../pool.js");
 //创建路由器对象
 var router=express.Router();
+
+
 //往武器列表添加数据
-//http://127.0.0.1:8080/user/list_add?bz_listId=10&title=1232&subtitle=123&details=123&pic=235
+//http://127.0.0.1:8080/game/list_add?bz_listId=10&title=1232&subtitle=123&details=123&pic=235
 router.get('/list_add',function(req,res){
   //获取get请求的数据
   var obj=req.query;
@@ -40,8 +42,10 @@ router.get('/list_add',function(req,res){
 	}
   });
 });
+
+
 //删除武器列表
-//http://127.0.0.1:8080/user/list_delete?uid=30
+//http://127.0.0.1:8080/game/list_delete?uid=30
 router.get('/list_delete',function(req,res){
   //获取get数据
   var obj=req.query;
@@ -61,9 +65,11 @@ router.get('/list_delete',function(req,res){
 	}
   });
 });
+
+
+
 //修改武器列表
 //浏览器地址栏测试地址
-//http://127.0.0.1:8080/user/list_update?details=%E4%BD%BF%E7%94%A87.62%E6%AF%AB%E7%B1%B3%E6%AD%A5%E6%9E%AA%E5%AD%90%E5%BC%B9%E3%80%82&title=AK-47&subtitle=%E5%A8%81%E5%8A%9B%E5%A4%A7%E3%80%81%E5%90%8E%E5%BA%A7%E5%BC%BA%EF%BC%8C%E9%80%82%E7%94%A8%E5%90%84%E7%A7%8D%E8%B7%9D%E7%A6%BB%E7%9A%84%E4%BD%9C%E6%88%98%EF%BC%9B%E4%BD%BF%E7%94%A87.62%E6%AF%AB%E7%B1%B3%E6%AD%A5%E6%9E%AA%E5%AD%90%E5%BC%B9%E3%80%82&uid=1
 router.get('/list_update',function(req,res){
   //获取get请求数据
   var obj=req.query;
@@ -93,6 +99,8 @@ pool.query('UPDATE bz_weapon SET title=?,subtitle=?,details=? WHERE uid=?',[
 	}
   });
 })
+
+
 //查询武器列表
 //http://127.0.0.1:8080/user/list_userlist?bz_listId=10
 router.get("/list_userlist",(req,res)=>{
@@ -104,6 +112,9 @@ pool.query("SELECT * FROM bz_weapon WHERE bz_listId=?",[obj],(err,result)=>{
 		console.log(result);
 	});
 });
+
+
+
 //以下为公告列表
 
 //添加
@@ -164,7 +175,6 @@ router.get('/game_delete',function(req,res){
 
 
 //修改
-//http://127.0.0.1:8080/user/game_update?Nottitle=458&NotContent=%E6%88%91%E5%8F%88%E4%B8%80%E5%A4%B4%E5%B0%8F%E6%AF%9B%E9%A9%B4&Nottime=2019-7-7&Notid=5
 router.get('/game_update',function(req,res){
   //获取get请求数据
   var obj=req.query;

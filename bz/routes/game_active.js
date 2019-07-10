@@ -2,7 +2,7 @@ const express = require('express')
 const pool = require('../pool.js')
 var active = express.Router()
 /*-------------------------------active表-------------------------- */
-// 查找
+// 查找游戏公告
 active.get("/check",(req,res)=>{
     // 获取页面地址栏actid=后的内容
     var obj=req.query.actid
@@ -20,7 +20,7 @@ active.get("/check",(req,res)=>{
    
    
 })
-// 删除
+// 删除游戏公告(管理员权限)
 active.get("/delete",(req,res)=>{
     // 获取页面地址栏actid=后的内容
     var de = req.query.actid
@@ -33,7 +33,9 @@ active.get("/delete",(req,res)=>{
         }
     })
 })
-// 增加
+
+
+// 添加游戏公告(管理员权限)
 active.get("/gain",(req,res)=>{
     // 获取页面地址栏actid=后的内容
     var gn = req.query
@@ -50,7 +52,7 @@ active.get("/gain",(req,res)=>{
         }
     })
 })
-// 修改
+// 修改游戏公告(管理员权限)
 active.get("/alter",(req,res)=>{
     var obj =req.query
     pool.query("update game_active set ? where actid=?",[obj,obj.actid],(err,result)=>{
