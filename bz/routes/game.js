@@ -207,7 +207,7 @@ pool.query('UPDATE Game_notice SET Nottitle=?,NotContent=?,Nottime=? WHERE Notid
 
 //查询
 //http://127.0.0.1:8080/user/game_userlist?Gameid=70
-router.get("/game_userlist",(req,res)=>{
+router.get("/game_notlist",(req,res)=>{
 var obj=req.query.Gameid;
  //连接池查询所有用户
 pool.query("SELECT * FROM Game_notice WHERE Gameid=?",[obj],(err,result)=>{

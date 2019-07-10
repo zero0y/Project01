@@ -28,8 +28,8 @@ server.use('/admin',adminRouter);  //管理员
 server.use('/posting',posting)  //帖子
 server.use("/reply",reply)  //回复
 server.use("/game",active)   //游戏活动
-server.use("/game",strategy)  //游戏公告
-server.use("/game",game)    //游戏图鉴
+server.use("/game",strategy)  //游戏攻略
+server.use("/game",game)    //游戏图鉴   游戏公告
 server.use("/pro",product)    //游戏周边
 server.use("/user",user)    //用户信息
 
