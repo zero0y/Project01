@@ -347,3 +347,28 @@ INSERT INTO bz_ambitus VALUES(null,'img/pei_jian/1.jpg',56.00,
  INSERT INTO bz_ambitus VALUES(null,'img/pei_jian/8.jpg',66.00,
  'H1Z1大吉大利吃鸡游戏枪模型挂件','名称:钥匙扣 分类:AWM+三级头盔','挂件');
 
+#帖子表
+CREATE TABLE Posting(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    uname   VARCHAR(50),#用户名
+    sort    VARCHAR(15),#分类
+    title   VARCHAR(50),#标题
+    content TEXT(2000),#内容
+    video   VARCHAR(255),#视频
+    img     VARCHAR(255)#图片
+);
+INSERT INTO Posting VALUES(1,"laowang","qiangzi","kiis"
+,"James Watson, Philip Mayo and I gave a slide and video presentation","http://127.0.0.1/video/hhhi.mp4","http://127.0.0.1/img/kiss.jpg"),(null,"laowang","qiangzi","kiis"
+,"James Watson, Philip Mayo and I gave a slide and video presentation","http://127.0.0.1/video/hhhi.mp4","http://127.0.0.1/img/kiss.jpg"),(null,"laowang","qiangzi","kiis"
+,"James Watson, Philip Mayo and I gave a slide and video presentation","http://127.0.0.1/video/hhhi.mp4","http://127.0.0.1/img/kiss.jpg");
+
+
+#回复表
+CREATE TABLE Reply(
+    id INT  PRIMARY KEY AUTO_INCREMENT,
+    uname   VARCHAR(50),
+    content VARCHAR(255),
+    img     VARCHAR(255),
+    RDate   DATE
+);
+INSERT INTO Reply VALUES(1,"qiangzi","nitaishuile",'6666.jpg',19991221),(null,"qiangzi","nitaishuile",'6666.jpg',19991221),(null,"qiangzi","nitaishuile",'6666.jpg',19991221);
